@@ -28,6 +28,18 @@ class MainActivity : AppCompatActivity() {
             )}
     }
 
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        super.onSaveInstanceState(savedInstanceState)
+
+        savedInstanceState.putString("hasil", binding.teksHasil.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        binding.teksHasil.setText(savedInstanceState.getString("hasil"))
+    }
+
 
     private fun  hitungKonversi(){
         val stringInput = binding.inputEditText.text.toString()
