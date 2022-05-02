@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">motogpModul4</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Bachrul Uluum</string>
+    <string name="nav_header_subtitle" translatable="false">2010817210025</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome">Welcome</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_name">Name</string>
+    <string name="menu_gallery">Rider Name</string>
+    <string name="menu_slideshow">Team</string>
+</resources>

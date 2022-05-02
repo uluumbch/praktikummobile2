@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Selamat Datang</string>
+    <string name="navigation_drawer_open">Buka Navigasi</string>
+    <string name="navigation_drawer_close">Tutup Navigasi</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="menu_home">Beranda</string>
+    <string name="menu_gallery">Nama Pebalap</string>
+    <string name="menu_slideshow">Tim</string>
+    <string name="menu_name">Nama</string>
+</resources>
