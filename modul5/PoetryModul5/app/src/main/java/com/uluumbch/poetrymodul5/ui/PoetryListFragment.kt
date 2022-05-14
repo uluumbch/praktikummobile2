@@ -31,6 +31,7 @@ class PoetryListFragment : Fragment(){
             findNavController()
                 .navigate(R.id.action_poetryListFragment_to_poetryDetailFragment)
         })
+        // menambahkan dekorasi garis bawah
         binding.recyclerView.addItemDecoration(MaterialDividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL))
 
 

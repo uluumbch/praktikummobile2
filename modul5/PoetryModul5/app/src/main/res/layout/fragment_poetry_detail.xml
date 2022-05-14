@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.uluumbch.poetrymodul5.ui.PoetryViewModel" />
@@ -19,22 +19,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
+            android:text="@{ viewModel.poem.title}"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-            android:text="@{viewModel.poem.title}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Bunga yang Indah sekali"/>
+            tools:text="Bunga yang Indah sekali" />
 
         <TextView
             android:id="@+id/author"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             android:padding="4dp"
             android:text="@{viewModel.poem.author}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title"
-            tools:text="Bachrul Uluum" />
+            tools:text="@tools:sample/full_names" />
 
         <View
             android:id="@+id/view"
@@ -45,16 +45,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/author" />
 
-        <TextView
-            android:id="@+id/lines"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
 
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-            android:text="@{viewModel.listToString(viewModel.poem.lines)}"
-            app:layout_constraintTop_toTopOf="@+id/view"
-            tools:text="SWEET PICTURE of Life's chequer'd hour!\n
+
+            <TextView
+                android:id="@+id/lines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+
+                android:text="@{viewModel.listToString(viewModel.poem.lines)}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintTop_toTopOf="@+id/view"
+                tools:text="SWEET PICTURE of Life's chequer'd hour!\n
 Ah, wherefore droop thy blushing head?\n
 Tell me, oh tell me, hap'less flow'r,\n
 Is it because thy charms are fled?\n
@@ -87,6 +94,7 @@ Shall bid thy fading charms bestow\n
 Soft odours for life's happy hour,\n
 Kind, healing balsam for its woe!\n
 If such thy virtues, ROSE DIVINE!\n
-OH ! MAY THY ENVIED FATE BE MINE."/>
+OH ! MAY THY ENVIED FATE BE MINE." />
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
