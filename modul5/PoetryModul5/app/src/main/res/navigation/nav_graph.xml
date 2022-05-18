@@ -17,5 +17,9 @@
         android:id="@+id/poetryDetailFragment"
         android:name="com.uluumbch.poetrymodul5.ui.PoetryDetailFragment"
         android:label="PoetryDetailFragment"
-        tools:layout="@layout/fragment_poetry_detail"/>
+        tools:layout="@layout/fragment_poetry_detail">
+        <action
+            android:id="@+id/action_poetryDetailFragment_to_poetryListFragment"
+            app:destination="@id/poetryListFragment" />
+    </fragment>
 </navigation>
