@@ -1,10 +1,14 @@
 package com.uluumbch.poetrymodul5
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.uluumbch.poetrymodul5.ui.PoetryViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
